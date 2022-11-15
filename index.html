@@ -12,41 +12,77 @@
 <body onload="onloadFunction()">
     <div class="wrapper">
         <!-- barra do topo -->
-        <div class="top-bar" id="home">
+        <div class="top-bar">
             <div class="container">
                 <div class="adress">
-                    <i class="bx bxs-map"></i> Rua 25 de Setembro, 1000
+                    <i class="bx bxs-map"></i> Avenida Dom Américo, 1520
                 </div>
                 <div class="contact">
-                    <span><i class="bx bxs-phone"></i> <span>(18) 3341-2400</span></span>
-                    <span><i class="bx bx-envelope"></i> <span>contato@restaurante-alvorada.com</span></span>
+                    <span><i class="bx bxs-phone"></i> <span>(11) 3300-0000</span></span>
+                    <span><i class="bx bx-envelope"></i> <span>contato@restaurantealvorada.br</span></span>
                 </div>
             </div>
         </div>
         <!-- área de navegação -->
-        <nav>
+        <nav id="home">
             <div class="container">
                 <a href="https://restaurante-alvorada.com" class="logo">Alvorada<span>.</span></a>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li>Cardápio<i class='bx bxs-chevron-down'></i></li>
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li class="subitem">Cardápio<i class='bx bxs-chevron-down'></i>
+                        <ol class="submenu">
+                            <li>Entradas</li>
+                            <li>Pratos principais</li>
+                            <li>Bebidas</li>
+                            <li>Sobremesas</li>
+                        </ol>
+                    </li>
                     <li><a href="#sobre">Sobre nós</a></li>
-                    <li><a href="#menu">Cardápio</a></li>
+                    <li><a href="#menu">Equipe</a></li>
                     <li><a href="#footer">Localização</a></li>
                     <li><a href="#form">Contato</a></li>
                 </ul>
+                <div class="mobButton">
+                    <span class="bars" onclick="openMenu()">|||</span>
+                    <span class="close" onclick="openMenu()"><i class="bx bx-x"></i></span>
+                </div>
             </div>
         </nav>
+        <!-- menu mobile -->
+        <section class="menu-mobile menumobileitem" id="menu-mobile">
+            <div class="content menumobileitem">
+                <ul>
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li class="subitem-mobile menumobileitem" onclick="loadSubitem()">Cardápio<i class='bx bxs-chevron-down menumobileitem'></i>
+                        <ol class="subitem-menu menumobileitem">
+                            <li>Entradas</li>
+                            <li>Pratos principais</li>
+                            <li>Bebidas</li>
+                            <li>Sobremesas</li>
+                        </ol>
+                    </li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#menu">Equipe</a></li>
+                    <li><a href="#footer">Localização</a></li>
+                    <li><a href="#form">Contato</a></li>
+                </ul>
+                <div class="social">
+                    <i class="bx bxl-facebook"></i>
+                    <i class="bx bxl-instagram"></i>
+                    <i class="bx bxl-whatsapp"></i>
+                </div>
+            </div>
+        </section>
         <!-- cabeçalho -->
         <header>
             <div class="container">
                 <div class="content">
-                    <h3>Bem-vindo ao</h3>
-                    <h1>Restaurante Alvorada</h1>
-                    <h2>Atendemos de segunda à sábado para almoço e jantar.</h2>
-                    <a href="#menu"><button>ver cardápio</button></a>
+                    <h3 class="title-content">Bem-vindo ao</h3>
+                    <h1 class="title-content">Restaurante Alvorada</h1>
+                    <h2 class="title-content">Lorem ipsum dolor amet sit lorem dolor.</h2>
+                    <a href="#menu" class="title-content"><button>ver cardápio</button></a>
                     <div class="nav-arrow">
-                        <i class='bx bxs-chevron-down'></i>
+                            <i class='bx bxs-chevron-down'></i>
                     </div>
                 </div>
             </div>
@@ -57,8 +93,7 @@
                 <div class="text">
                     <div class="content">
                         <h2>Uma grande variedade de pratos para uma <span>experiência inesquecível</span>.</h2>
-                        <p>Nosso cardápio está cheio de delícias da culinária italiana e brasileira. Temos os melhores pratos da região, além de um grande número de vinhos e cachaças que harmonizam perfeitamente com o menu.</p>
-                        <p>Conheça os nossos pratos e traga a sua família. <span>Surpreenda-se do começo ao fim</span>. Reservas pelo telefone: <strong>(18) 3341-2400</strong> ou e-mail <strong>reservas@restaurante-alvorada.com</strong>.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In error voluptas sunt unde corporis esse, quia expedita, sint dignissimos perspiciatis pariatur? Corporis sequi magni error dolor! Dolore esse totam fugiat! uptas sunt unde corporis esse, quia expedita, sint dignissimos perspiciatis pariatur? Corporis sequi magni error dolor! Dolore esse totam fugiat!</p>
                         <img src="./assets/images/waves white.jpg">
                         <img src="./assets/images/elemento.png" class="element">
                     </div>
@@ -79,50 +114,50 @@
                 <h2>Nosso <span>Menu</span></h2>
                 </div>
                 <div class="menu">
-                    <p>Em nosso cardápio você encontrará opções da cozinha italiana e receitas da casa para melhor agradar a todos os públicos. Além dos ingredientes tradicionais, você também pode escolher como deseja montar o pedido, tipos de acompanhamentos e molhos. Veja algumas opções abaixo.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque beatae ex molestias vitae? Labore dolores voluptates tempore! Qui, mollitia, dignissimos, consequatur odio laudantium ullam facere enim eius impedit alias repudiandae.</p>
                     <div class="plates">
                         <div class="plate">
-                            <h3>Ravioli</h3>
-                            <p>Frango, camarão, legumes ou provolone.</p>
+                            <h3>Prato</h3>
+                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
                         </div>
                         <div class="plate">
-                            <h3>Tagiatelle Alla Bolognese</h3>
-                            <p>Spaguetti com molho de carne e bacon ao vinho branco.</p>
+                            <h3>Prato</h3>
+                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
                         </div>
                         <div class="plate">
-                            <h3>Tortellini</h3>
-                            <p>Tortellini com molho branco recheado com carne bovina, queijo parmesão.</p>
+                            <h3>Prato</h3>
+                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
                         </div>
                     </div>
                     <div class="plates">
                         <div class="plate">
-                            <h3>Lasagna</h3>
-                            <p>Lasagna tradicional: carne bovina, queijo parmesão ou grana padano.</p>
+                            <h3>Prato</h3>
+                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
                         </div>
                         <div class="plate">
-                            <h3>Rana Fritta</h3>
-                            <p>Temperada com alho, sal; salteada em molho e frita na manteiga.</p>
+                            <h3>Prato</h3>
+                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
                         </div>
                         <div class="plate">
-                            <h3>Spaghetti</h3>
-                            <p>Manjericão, parmesão ralado e molho de tomate tradicional.</p>
+                            <h3>Prato</h3>
+                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
                         </div>
                     </div>
                     <div class="plates">
                         <div class="plate">
-                            <h3>Risotto</h3>
-                            <p>Risotto feito com caldo de frango, refogado ao vinho branco.</p>
+                            <h3>Prato</h3>
+                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
                         </div>
                         <div class="plate">
-                            <h3>Polpettone</h3>
-                            <p>Carne moída, picanha suína e queijo provolone.</p>
+                            <h3>Prato</h3>
+                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
                         </div>
                         <div class="plate">
-                            <h3>Pizza</h3>
-                            <p>Famosa receita de pizza italiana tradicional com recheio de 3 queijos.</p>
+                            <h3>Prato</h3>
+                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
                         </div>
                     </div>
-                    <button>ver cardápio</button>
+                    <button>fazer reserva</button>
                 </div>
             </div>
         </div>
@@ -181,16 +216,16 @@
                 <div class="icons">
                     <div class="icon">
                         <div class="ico"><i class="bx bx-map"></i></div>
-                        <div class="text">Av. Laurimar Coelho, 577<br>CEP 19880-000
+                        <div class="text">Av. Dom Américo, 1520<br>CEP 11000-000
                         </div>
                     </div>
                     <div class="icon">
                         <div class="ico"><i class="bx bx-phone"></i></div>
-                        <div class="text">(18) 3341-2400<br>(18) 99740-3535</div>
+                        <div class="text">(11) 3300-0000<br>(11) 99990-0000</div>
                     </div>
                     <div class="icon">
                         <div class="ico"><i class="bx bx-envelope"></i></div>
-                        <div class="text">contato@restaurante-alvorada.com</div>
+                        <div class="text">contato@restaurantealvorada.br</div>
                     </div>
                 </div>
                 <div class="social-icons">
@@ -208,7 +243,7 @@
         </footer>
         <div class="bot-bar">
             <div class="container">
-                <p>&copy; Todos os Direitos Reservados. Desenvolvido por <a href="https://impulsewebti.com.br">Impulse Web TI</a></p>
+                <p>&copy; Todos os Direitos Reservados. Desenvolvido por <a href="https://github.com/johnnyvasconcelos">Johnny Vasconcelos</a></p>
             </div>
         </div>
     </div>
