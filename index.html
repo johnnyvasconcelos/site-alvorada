@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="./assets/script.js" defer></script>
+    <title>Restaurante Alvorada</title>
+</head>
+<body onload="onloadFunction()">
+    <div class="wrapper">
+        <!-- barra do topo -->
+        <div class="top-bar" id="home">
+            <div class="container">
+                <div class="adress">
+                    <i class="bx bxs-map"></i> Rua 25 de Setembro, 1000
+                </div>
+                <div class="contact">
+                    <span><i class="bx bxs-phone"></i> <span>(18) 3341-2400</span></span>
+                    <span><i class="bx bx-envelope"></i> <span>contato@restaurante-alvorada.com</span></span>
+                </div>
+            </div>
+        </div>
+        <!-- área de navegação -->
+        <nav>
+            <div class="container">
+                <a href="https://restaurante-alvorada.com" class="logo">Alvorada<span>.</span></a>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li>Cardápio<i class='bx bxs-chevron-down'></i></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#menu">Cardápio</a></li>
+                    <li><a href="#footer">Localização</a></li>
+                    <li><a href="#form">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- cabeçalho -->
+        <header>
+            <div class="container">
+                <div class="content">
+                    <h3>Bem-vindo ao</h3>
+                    <h1>Restaurante Alvorada</h1>
+                    <h2>Atendemos de segunda à sábado para almoço e jantar.</h2>
+                    <a href="#menu"><button>ver cardápio</button></a>
+                    <div class="nav-arrow">
+                        <i class='bx bxs-chevron-down'></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- sobre -->
+        <section class="about" id="sobre">
+            <div class="container">
+                <div class="text">
+                    <div class="content">
+                        <h2>Uma grande variedade de pratos para uma <span>experiência inesquecível</span>.</h2>
+                        <p>Nosso cardápio está cheio de delícias da culinária italiana e brasileira. Temos os melhores pratos da região, além de um grande número de vinhos e cachaças que harmonizam perfeitamente com o menu.</p>
+                        <p>Conheça os nossos pratos e traga a sua família. <span>Surpreenda-se do começo ao fim</span>. Reservas pelo telefone: <strong>(18) 3341-2400</strong> ou e-mail <strong>reservas@restaurante-alvorada.com</strong>.</p>
+                        <img src="./assets/images/waves white.jpg">
+                        <img src="./assets/images/elemento.png" class="element">
+                    </div>
+                </div>
+                <div class="gallery">
+                    <img src="./assets/images/plate-1.jpg">
+                    <img src="./assets/images/plate-2.jpg">
+                    <img src="./assets/images/plate-3.jpg">
+                    <img src="./assets/images/plate-4.jpg">
+                </div>
+            </div>
+        </section>
+        <div class="place"></div>
+        <!-- cardápio -->
+        <div class="cardapio" id="menu">
+            <div class="container">
+                <div class="title">
+                <h2>Nosso <span>Menu</span></h2>
+                </div>
+                <div class="menu">
+                    <p>Em nosso cardápio você encontrará opções da cozinha italiana e receitas da casa para melhor agradar a todos os públicos. Além dos ingredientes tradicionais, você também pode escolher como deseja montar o pedido, tipos de acompanhamentos e molhos. Veja algumas opções abaixo.</p>
+                    <div class="plates">
+                        <div class="plate">
+                            <h3>Ravioli</h3>
+                            <p>Frango, camarão, legumes ou provolone.</p>
+                        </div>
+                        <div class="plate">
+                            <h3>Tagiatelle Alla Bolognese</h3>
+                            <p>Spaguetti com molho de carne e bacon ao vinho branco.</p>
+                        </div>
+                        <div class="plate">
+                            <h3>Tortellini</h3>
+                            <p>Tortellini com molho branco recheado com carne bovina, queijo parmesão.</p>
+                        </div>
+                    </div>
+                    <div class="plates">
+                        <div class="plate">
+                            <h3>Lasagna</h3>
+                            <p>Lasagna tradicional: carne bovina, queijo parmesão ou grana padano.</p>
+                        </div>
+                        <div class="plate">
+                            <h3>Rana Fritta</h3>
+                            <p>Temperada com alho, sal; salteada em molho e frita na manteiga.</p>
+                        </div>
+                        <div class="plate">
+                            <h3>Spaghetti</h3>
+                            <p>Manjericão, parmesão ralado e molho de tomate tradicional.</p>
+                        </div>
+                    </div>
+                    <div class="plates">
+                        <div class="plate">
+                            <h3>Risotto</h3>
+                            <p>Risotto feito com caldo de frango, refogado ao vinho branco.</p>
+                        </div>
+                        <div class="plate">
+                            <h3>Polpettone</h3>
+                            <p>Carne moída, picanha suína e queijo provolone.</p>
+                        </div>
+                        <div class="plate">
+                            <h3>Pizza</h3>
+                            <p>Famosa receita de pizza italiana tradicional com recheio de 3 queijos.</p>
+                        </div>
+                    </div>
+                    <button>ver cardápio</button>
+                </div>
+            </div>
+        </div>
+        <!-- avaliações -->
+        <div class="reviews">
+            <div class="container">
+                <div class="title">
+                    <h2>O que <span>nossos clientes</span> dizem</h2>
+                </div>
+                <div class="avaliacoes">
+                    <div class="people">
+                        <div class="image">
+                            <img src="./assets/images/people-1.jpg">
+                        </div>
+                        <p>A melhor picanha e filé mignon que já provei! Serviço e experiência incríveis e a decoração é maravilhosa. Voltarei com certeza!</p>
+                        <div class="nome">Luíza Viana</div>
+                    </div>
+                    <div class="indicators">
+                        <div class="circle black"></div>
+                        <div class="circle white"></div>
+                        <div class="circle white"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- formulário -->
+        <div class="form" id="form">
+            <div class="container">
+                <div class="title">
+                    <h2>Faça a sua <span>Reserva</span></h2>
+                </div>
+                <form action="">
+                    <div class="input">
+                        <input type="text" placeholder="Nome">
+                        <input type="text" placeholder="Telefone">
+                    </div>
+                    <div class="input">
+                        <input type="date" placeholder="Data">
+                        <input type="time" placeholder="Hora">
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="Vagas">
+                        <input type="text" placeholder="E-mail">
+                    </div>
+                    <div class="note">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Notas"></textarea>
+                    </div>
+                    <button>reservar</button>
+                </form>
+            </div>
+        </div>
+        <!-- rodapé -->
+        <footer id="footer">
+            <div class="container">
+                <h3>Entre em contato</h3>
+                <div class="icons">
+                    <div class="icon">
+                        <div class="ico"><i class="bx bx-map"></i></div>
+                        <div class="text">Av. Laurimar Coelho, 577<br>CEP 19880-000
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <div class="ico"><i class="bx bx-phone"></i></div>
+                        <div class="text">(18) 3341-2400<br>(18) 99740-3535</div>
+                    </div>
+                    <div class="icon">
+                        <div class="ico"><i class="bx bx-envelope"></i></div>
+                        <div class="text">contato@restaurante-alvorada.com</div>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <div class="icon">
+                        <i class="bx bxl-instagram"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="bx bxl-facebook"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="bx bxl-whatsapp"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="bot-bar">
+            <div class="container">
+                <p>&copy; Todos os Direitos Reservados. Desenvolvido por <a href="https://impulsewebti.com.br">Impulse Web TI</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

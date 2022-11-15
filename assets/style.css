@@ -1,0 +1,755 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* configurações base */
+
+:root {
+    --color-1: #4c754c;
+    --color-2: #ccbc6b;
+    --color-2-alt: #fcf3d7;
+    --color-3: #756e4c;
+    --dark: #333333;
+    --white: #fcfbf8;
+    --background: #012741;
+    --text: 'Jost', sans-serif;
+    --display:  'Cormorant Garamond', serif;
+    --serif: 'Cormorant Garamond', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    font-family: var(--text);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    font-family: var(--display);
+    font-size: 55px;
+    color: var(--white);
+}
+
+h1 {
+    font-family: var(--display);
+    font-size: 135px;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: var(--serif);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-1);
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    padding: 20px;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    width: 200px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.title {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 50px;
+    position: relative;
+}
+
+.title h2::after {
+    content: '';
+    background-image: url('../assets/images/waves.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 35px;
+    position: absolute;
+    right: 340px;
+    top: 13px;
+    width: 200px;
+}
+
+.title h2::before {
+    content: '';
+    background-image: url('../assets/images/waves-2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 35px;
+    position: absolute;
+    left: 340px;
+    top: 13px;
+    width: 200px;
+}
+
+.title h2 span {
+    color: var(--color-2);
+}
+
+/* barra do topo */
+
+.top-bar {
+    background-color: transparent;
+    height: 6vh;
+    position: fixed;
+    z-index: 1500;
+    transition: 0.6s;
+    width: 100%;
+    border-bottom: 1px solid #7575756c;
+}
+
+.top-bar .container .adress {
+    color: var(--white);
+}
+
+.top-bar .container .adress .bx {
+    margin-right: 5px;
+}
+
+.top-bar .container .contact {
+    color: var(--white);
+}
+
+.top-bar .container .contact > span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.top-bar .container .contact > span:nth-of-type(2) {
+    margin-left: 25px;
+}
+
+.top-bar .container .contact > span:nth-of-type(2) .bx {
+    transform: translateY(10%);
+}
+
+.top-bar .container .contact span span {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* barra de navegação */
+
+nav {
+    width: 100%;
+    background-color: transparent;
+    z-index: 1500!important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 6vh;
+    transition: 0.6s;
+    padding-top: 2vh;
+    padding-bottom: 20px;
+}
+
+nav .container ul {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.grayBackground {
+    background-color: #333333de;
+}
+
+nav .container ul li {
+    font-family: var(--text);
+    margin-left: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 3px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+nav .container ul li a {
+    color: var(--white);
+}
+
+nav .container ul li .bx {
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+nav .container ul li:nth-of-type(1) {
+    border-bottom: 2px solid var(--color-2);
+}
+
+/* cabeçalho */
+
+header {
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../assets/images/banner-7.jpg');
+    position: relative;
+    z-index: 100;
+}
+
+header::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background-color: #0000005d;
+    z-index: 300;
+}
+
+header .content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    position: absolute;
+    z-index: 1000;
+    width: 90%;
+    text-align: center;
+}
+
+header .content h1 {
+    color: var(--color-2-alt);
+    margin-bottom: 20px;
+}
+
+header .content h3 {
+    display: block;
+    width: 50%;
+    margin: auto;
+    color: var(--color-2);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+header .content h2 {
+    color: var(--white);
+    font-weight: 300;
+    font-size: 20px;
+    display: block;
+    font-family: var(--text);
+    margin-bottom: 40px;
+}
+
+header .content h3::after {
+    content: '';
+    background-image: url('../assets/images/waves.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40px;
+    position: absolute;
+    left: 340px;
+    top: -15px;
+    width: 250px;
+}
+
+header .content h3::before {
+    content: '';
+    background-image: url('../assets/images/waves-2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40px;
+    position: absolute;
+    right: 340px;
+    top: -15px;
+    width: 250px;
+}
+
+header .content button {
+    transition: 0.8s;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+}
+
+header .content button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.6s;
+    width: 0%;
+    background: #ffffff00;
+}
+
+header .content button:hover {
+    color: var(--dark);
+    background-color: var(--white);
+    transform: scale(103%);
+}
+
+header .content button:hover::after {
+    width: 100%;
+    background-color: var(--white);
+}
+
+header .container .nav-arrow {
+    text-align: center;
+    cursor: pointer;
+    transition: 1s all ease-in-out;
+    transform: translateY(150%);
+}
+
+header .container .nav-arrow .bx {
+    font-size: 55px;
+    color: #ffffff48;
+    transition: 1s all ease-in-out;
+}
+
+header .container .nav-arrow.active {
+    transform: translateY(200%);
+}
+
+header .container .nav-arrow.active .bx {
+    color: var(--color-2-alt);
+}
+
+/* sobre */
+
+.about {
+   height: 650px; 
+   margin-top: 10px;
+}
+
+.about .container .text {
+    width: 50%;
+    padding: 50px 100px 50px 0;
+}
+
+.about .container .text .content {
+    border-right: 1px solid #7575757e;
+    padding-right: 40px;
+    position: relative;
+}
+
+.about .container .text .content > img {
+    width: 200px;
+    opacity: 0.4;
+    display: block;
+    margin: 30px 0 0 0;
+}
+
+.about .container .text .content h2 {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 50px;
+}
+
+.about .container .text .content p {
+    font-size: 18px;
+}
+
+.about .container .text h2 span {
+    color: var(--color-2);
+}
+
+.about .container .text p span {
+    color: var(--color-2);
+}
+
+.about .container .text .content .element {
+    transform: rotate(90deg)!important;
+    display: block;
+    position: absolute;
+    right: -120px;
+    top: 50%;
+    display: none;
+    transform: translateY(-50%);
+}
+
+.about .container .gallery {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about .container .gallery img {
+    width: 49.9%;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+.place {
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-image: url('../assets/images/restaurante.jpg');
+    margin-top: 20px;
+}
+
+/* cardápio */
+
+.cardapio {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.cardapio .container {
+    flex-wrap: wrap;
+}
+
+.cardapio .container .menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cardapio .container .menu p {
+    width: 70%;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    margin: 25px auto 80px auto;
+}
+
+.cardapio .container .menu .plates {
+    width: 33.33%;
+    border-right: 1px solid #7575757e;
+    padding: 0 35px;
+}
+
+.cardapio .container .menu .plates:nth-of-type(3) {
+    border-right: 1px solid white;
+}
+
+.cardapio .container .menu .plates .plate {
+    text-align: center;
+    height: 220px;
+}
+
+.cardapio .container .menu .plates .plate h3 {
+    color: var(--color-2);
+}
+
+.cardapio .container .menu .plates .plate p {
+    font-size: 18px;
+}
+
+.cardapio .container .menu button {
+    border: 1px solid var(--dark);
+    color: var(--dark);
+    cursor: pointer;
+    margin: 55px auto 15px auto;
+    transition: 0.5s;
+}
+
+.cardapio .container .menu button:hover {
+    background-color: var(--color-2);
+    color: var(--white);
+    border: 1px solid var(--color-2);
+}
+
+/* avaliações */
+
+.reviews {
+    background-color: #ebebeb;
+    padding: 100px 0;
+}
+
+.reviews .container {
+    flex-wrap: wrap;
+}
+
+.reviews .container .title {
+    margin-bottom: 60px;
+}
+
+.reviews .container .title h2::after {
+    right: 190px!important;
+}
+
+.reviews .container .title h2::before {
+    left: 190px!important;
+}
+
+
+.reviews .container .avaliacoes {
+    width: 100%;
+}
+
+.reviews .container .avaliacoes {
+    text-align: center;
+}
+
+.reviews .container .avaliacoes .people .image {
+    width: 75px;
+    height: 75px;
+    display: block;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.reviews .container .avaliacoes .people .image img {
+    width: 100%;
+}
+
+.reviews .container .avaliacoes .people p {
+    font-size: 20px;
+    display: block;
+    width: 60%;
+    margin: 0 auto 30px auto;
+}
+
+.reviews .container .avaliacoes .indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.reviews .container .avaliacoes .indicators > div {
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--dark);
+    border-radius: 50%;
+    margin: 0 3px;
+}
+
+.reviews .container .avaliacoes .indicators > div.white {
+    background-color: var(--dark);
+}
+
+.reviews .container .avaliacoes .nome {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-2);
+}
+
+/* formulário */
+
+.form .container .title h2::after {
+    right: 290px!important;
+}
+
+.form .container .title h2::before {
+    left: 290px!important;
+}
+
+.form {
+    padding: 100px 0;
+    background-image: url('../assets/images/form.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.form:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #1b1b1b88;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.form  .container {
+    flex-wrap: wrap;
+}
+
+.form  .container .title h2 {
+    color: var(--white);
+}
+
+.form  .container form {
+    display: block;
+    margin: 70px auto 20px auto;
+    z-index: 1000;
+    width: 65%;
+}
+
+.form .container form .input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form .container form input {
+    height: 60px;
+    background-color: var(--white);
+    padding: 20px;
+    width: 50%;
+    display: inline-block;
+    margin: 4px;
+    border: none;
+    outline: none;
+}
+
+.form .container form textarea {
+    border: none;
+    padding: 20px;
+    width: 100%;
+    display: block;
+    width: 99%;
+    margin: 5px auto 20px auto;
+    outline: none;
+}
+
+.form .container form button {
+    margin: auto;
+    display: block;
+}
+
+/* rodapé */
+
+footer {
+    padding: 120px 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background: var(--dark);
+}
+
+.bot-bar {
+    padding: 20px 0;
+    background-color: #1d1d1d;
+    text-align: center;
+    width: 100%;
+}
+
+.bot-bar .container {
+    width: 100%;
+}
+
+.bot-bar .container p {
+    font-size: 19px;
+    color: var(--white);
+    display: block;
+    margin: auto;
+}
+
+.bot-bar .container p a {
+    color: var(--color-2);
+}
+
+footer .container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .container h3 {
+    color: var(--color-2);
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+}
+
+footer .container .icons {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 40px auto 0 auto;
+}
+
+footer .container .icons .icon {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #7575757e;
+}
+
+footer .container .icons .icon .text {
+    color: var(--white);
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+footer .container .icons .icon .ico {
+    background-color: var(--color-2);
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+}
+
+footer .container .icons .ico .bx {
+    color: var(--white);
+    font-size: 25px;
+}
+
+footer .container .social-icons {
+    margin: 50px auto 0 auto;
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container .social-icons .icon {
+    padding: 6px;
+    border-radius: 50%;
+    display: block;
+}
+
+footer .container .social-icons .icon .bx {
+    color: var(--white);
+    font-size: 25px;
+}
+
+/* responsividade */
+
+/* desktop */
+
+@media (min-width: 1100px) {
+
+}
+
+/* tablet */
+
+@media (max-width: 990px) {
+
+}
+
+
+@media (max-width: 750px) {
+
+}
+
+/* mobile */
+
+@media (max-width: 500px) {
+
+}
