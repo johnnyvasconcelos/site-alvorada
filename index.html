@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurante Alvorada, Rua Laurimar Coelho, Cândido Mota SP.">
+    <!-- estilo -->
     <link rel="stylesheet" href="./assets/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- javascript -->
     <script src="./assets/script.js" defer></script>
     <title>Restaurante Alvorada</title>
 </head>
 <body onload="onloadFunction()">
     <div class="wrapper">
         <!-- barra do topo -->
-        <div class="top-bar">
+        <header class="top-bar">
             <div class="container">
                 <div class="adress">
-                    <i class="bx bxs-map"></i> Avenida Dom Américo, 1520
+                    <i class="bx bxs-map"></i> Rua Laurimar Coelho, 577
                 </div>
                 <div class="contact">
-                    <span><i class="bx bxs-phone"></i> <span>(11) 3300-0000</span></span>
-                    <span><i class="bx bx-envelope"></i> <span>contato@restaurantealvorada.br</span></span>
+                    <span><i class="bx bxs-phone"></i> <span>(18) 3341-2400</span></span>
+                    <span><i class="bx bx-envelope"></i> <span>contato@restaurante-alvorada.com</span></span>
                 </div>
             </div>
-        </div>
+        </header>
         <!-- área de navegação -->
         <nav id="home">
             <div class="container">
@@ -49,7 +52,7 @@
             </div>
         </nav>
         <!-- menu mobile -->
-        <section class="menu-mobile menumobileitem" id="menu-mobile">
+        <nav class="menu-mobile menumobileitem" id="menu-mobile">
             <div class="content menumobileitem">
                 <ul>
                     <li class="active"><a href="#home">Home</a></li>
@@ -72,15 +75,15 @@
                     <i class="bx bxl-whatsapp"></i>
                 </div>
             </div>
-        </section>
+        </nav>
         <!-- cabeçalho -->
-        <header>
+        <header class="header">
             <div class="container">
                 <div class="content">
-                    <h3 class="title-content">Bem-vindo ao</h3>
-                    <h1 class="title-content">Restaurante Alvorada</h1>
-                    <h2 class="title-content">Lorem ipsum dolor amet sit lorem dolor.</h2>
-                    <a href="#menu" class="title-content"><button>ver cardápio</button></a>
+                        <h3 class="title-content">Bem-vindo ao</h3>
+                        <h1 class="title-content">Restaurante Alvorada</h1>
+                        <h2 class="title-content">Atendemos de segunda à sábado para almoço e jantar.</h2>
+                    <a href="#menu" class="title-content btn btn-cardapio">ver cardápio</a>
                     <div class="nav-arrow">
                             <i class='bx bxs-chevron-down'></i>
                     </div>
@@ -93,74 +96,82 @@
                 <div class="text">
                     <div class="content">
                         <h2>Uma grande variedade de pratos para uma <span>experiência inesquecível</span>.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In error voluptas sunt unde corporis esse, quia expedita, sint dignissimos perspiciatis pariatur? Corporis sequi magni error dolor! Dolore esse totam fugiat! uptas sunt unde corporis esse, quia expedita, sint dignissimos perspiciatis pariatur? Corporis sequi magni error dolor! Dolore esse totam fugiat!</p>
-                        <img src="./assets/images/waves white.jpg">
-                        <img src="./assets/images/elemento.png" class="element">
+                        <p>Iniciado há vinte e oito anos pelo italiano Omero Biancci, um dos mais renomados restauranters do Brasil. A Alvorada tem enfoque na culinária italiana, brasileira e européia clássica.</p>
+                        <p>A qualidade dos nossos pratos é impecável, sendo o nosso maior objetivo. Os ingredientes que utilizamos são de origem italiana com alta qualidade e procedência. Nossa culinária excepcional, junto do ambiente, serão as principais características que te trarão uma experiência incrível do início ao fim.
+                        <br>Reservas pelo telefone: <strong>(18) 3341-2400</strong> ou e-mail <strong>reservas@restaurante-alvorada.com</strong>.</p>
+                        <img src="./assets/images/waves-white.webp" alt="Ondas PNG.">
+                        <img src="./assets/images/elemento.webp" alt="Linha separadora." class="element">
                     </div>
                 </div>
                 <div class="gallery">
-                    <img src="./assets/images/plate-1.jpg">
-                    <img src="./assets/images/plate-2.jpg">
-                    <img src="./assets/images/plate-3.jpg">
-                    <img src="./assets/images/plate-4.jpg">
+                    <img src="./assets/images/plate-1.webp" alt="Bolo de laranja com chocolate.">
+                    <img src="./assets/images/plate-2.webp" alt="Macarrão com feijão e salada em uma frigideira.">
+                    <img src="./assets/images/plate-3.webp" alt="Peixe frito com cebola.">
+                    <img src="./assets/images/plate-4.webp" alt="Carne de porco cozida com batatas.">
                 </div>
             </div>
         </section>
+        <main style="display: none">
+                <h1>Restaurante em Cândido Mota - SP</h1>
+                <h2>Faça a sua reserva. Atendimento de Seg. à Sáb. das 10 às 20 hrs.</h2>
+            <p>Uma grande variedade de pratos para uma experiência inesquecível.</p>
+        </main>
+        <!-- imagem de fundo -->
         <div class="place"></div>
         <!-- cardápio -->
-        <div class="cardapio" id="menu">
+        <section class="cardapio" id="menu">
             <div class="container">
                 <div class="title">
-                <h2>Nosso <span>Menu</span></h2>
+                <h2 aria-label="Cardápio com alguns pratos.">Nosso <span>Menu</span></h2>
                 </div>
                 <div class="menu">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque beatae ex molestias vitae? Labore dolores voluptates tempore! Qui, mollitia, dignissimos, consequatur odio laudantium ullam facere enim eius impedit alias repudiandae.</p>
+                    <p>No nosso cardápio você encontrará opções da cozinha italiana, receitas da casa com os pratos mais pedidos. Além dos ingredientes tradicionais você também pode escolher como deseja montar o pedido, tipos de acompanhamentos, molhos e bebidas. Veja algumas opções abaixo.</p>
                     <div class="plates">
-                        <div class="plate">
-                            <h3>Prato</h3>
-                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
-                        </div>
-                        <div class="plate">
-                            <h3>Prato</h3>
-                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
-                        </div>
-                        <div class="plate">
-                            <h3>Prato</h3>
-                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
-                        </div>
+                        <article class="plate">
+                            <h3>Ravioli</h3>
+                            <p>Receita da casa: Frango, camarão, legumes e provolone.</p>
+                        </article>
+                        <article class="plate">
+                            <h3>Tagiatelle Alla Bolognese</h3>
+                            <p>Spaguetti com molho de carne e bacon ao vinho branco.</p>
+                        </article>
+                        <article class="plate">
+                            <h3>Tortellini</h3>
+                            <p>Tortellini com molho branco recheado com carne bovina, queijo parmesão.</p>
+                        </article>
+                    </div>
+                    <div class="plates">
+                        <article class="plate">
+                            <h3>Lasagna</h3>
+                            <p>Lasagna tradicional: carne bovina, queijo parmesão ou grana padano.</p>
+                        </article>
+                        <article class="plate">
+                            <h3>Rana Fritta</h3>
+                            <p>Temperada com alho, sal; salteada em molho e frita na manteiga.</p>
+                        </article>
+                        <article class="plate">
+                            <h3>Spaghetti</h3>
+                            <p>Manjericão, parmesão ralado e molho de tomate tradicional.</p>
+                        </article>
                     </div>
                     <div class="plates">
                         <div class="plate">
-                            <h3>Prato</h3>
-                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
+                            <h3>Risotto</h3>
+                            <p>Risotto feito com caldo de frango, refogado ao vinho branco.</p>
                         </div>
                         <div class="plate">
-                            <h3>Prato</h3>
-                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
+                            <h3>Polpettone</h3>
+                            <p>Carne moída, picanha suína e queijo provolone.</p>
                         </div>
                         <div class="plate">
-                            <h3>Prato</h3>
-                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
+                            <h3>Pizza</h3>
+                            <p>Famosa receita de pizza italiana tradicional com recheio de 3 queijos.</p>
                         </div>
                     </div>
-                    <div class="plates">
-                        <div class="plate">
-                            <h3>Prato</h3>
-                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
-                        </div>
-                        <div class="plate">
-                            <h3>Prato</h3>
-                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
-                        </div>
-                        <div class="plate">
-                            <h3>Prato</h3>
-                            <p>Lorem ipsum dolor amet sit amet dolor lorem ipsum.</p>
-                        </div>
-                    </div>
-                    <button>fazer reserva</button>
+                    <a href="#form" class="btn">fazer reserva</a>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- avaliações -->
         <div class="reviews">
             <div class="container">
@@ -168,12 +179,28 @@
                     <h2>O que <span>nossos clientes</span> dizem</h2>
                 </div>
                 <div class="avaliacoes">
-                    <div class="people">
-                        <div class="image">
-                            <img src="./assets/images/people-1.jpg">
+                    <div class="review-area">
+                        <div class="people">
+                            <div class="image">
+                                <img src="./assets/images/people-1.webp" alt="Luíza Viana.">
+                            </div>
+                            <p>A melhor picanha e filé mignon que já provei! Serviço e experiência incríveis e a decoração é maravilhosa. Voltarei com certeza!</p>
+                            <div class="nome">Luíza Viana</div>
                         </div>
-                        <p>A melhor picanha e filé mignon que já provei! Serviço e experiência incríveis e a decoração é maravilhosa. Voltarei com certeza!</p>
-                        <div class="nome">Luíza Viana</div>
+                        <div class="people">
+                            <div class="image">
+                                <img src="./assets/images/people-2.webp" alt="Saulo Roberto Bacci.">
+                            </div>
+                            <p>Já estive três vezes. Atendimento e ambiente de excelência. Todos os pratos que provei estavam divinos. Boa carta de vinhos.</p>
+                            <div class="nome">Saulo Roberto Bacci</div>
+                        </div>
+                        <div class="people">
+                            <div class="image">
+                                <img src="./assets/images/people-3.webp" alt="Luís Mendonça da Silva.">
+                            </div>
+                            <p>Ambiente muito sofisticado! As três horas de experiência valeram muito a pena. Uma das melhores experiências gastronômicas que tive nos últimos meses.</p>
+                            <div class="nome">Luís Mendonça da Silva</div>
+                        </div>
                     </div>
                     <div class="indicators">
                         <div class="circle black"></div>
@@ -189,24 +216,25 @@
                 <div class="title">
                     <h2>Faça a sua <span>Reserva</span></h2>
                 </div>
-                <form action="">
+                <form action="post.php" method="post">
                     <div class="input">
                         <input type="text" placeholder="Nome">
                         <input type="text" placeholder="Telefone">
                     </div>
                     <div class="input">
-                        <input type="date" placeholder="Data">
-                        <input type="time" placeholder="Hora">
+                        <input type="date">
+                        <input type="time">
                     </div>
                     <div class="input">
                         <input type="text" placeholder="Vagas">
                         <input type="text" placeholder="E-mail">
                     </div>
                     <div class="note">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Notas"></textarea>
+                        <textarea name="texto" id="textarea" cols="30" rows="10" placeholder="Notas"></textarea>
                     </div>
-                    <button>reservar</button>
+                    <button type="button" onclick="clearSendF()">reservar</button>
                 </form>
+                <span class="resposta"></span>
             </div>
         </div>
         <!-- rodapé -->
@@ -216,16 +244,16 @@
                 <div class="icons">
                     <div class="icon">
                         <div class="ico"><i class="bx bx-map"></i></div>
-                        <div class="text">Av. Dom Américo, 1520<br>CEP 11000-000
+                        <div class="text">Rua Laurimar Coelho, 577<br>CEP 19880-000
                         </div>
                     </div>
                     <div class="icon">
                         <div class="ico"><i class="bx bx-phone"></i></div>
-                        <div class="text">(11) 3300-0000<br>(11) 99990-0000</div>
+                        <div class="text">(18) 3341-2400<br>(18) 99740-3535</div>
                     </div>
                     <div class="icon">
                         <div class="ico"><i class="bx bx-envelope"></i></div>
-                        <div class="text">contato@restaurantealvorada.br</div>
+                        <div class="text">contato@restaurante-alvorada.com</div>
                     </div>
                 </div>
                 <div class="social-icons">
@@ -241,11 +269,11 @@
                 </div>
             </div>
         </footer>
-        <div class="bot-bar">
+        <footer class="bot-bar">
             <div class="container">
-                <p>&copy; Todos os Direitos Reservados. Desenvolvido por <a href="https://github.com/johnnyvasconcelos">Johnny Vasconcelos</a></p>
+                <p>&copy; Todos os Direitos Reservados. Desenvolvido por <a href="https://impulsewebti.com.br">Impulse Web TI</a>.</p>
             </div>
-        </div>
+        </footer>
     </div>
 </body>
 </html>

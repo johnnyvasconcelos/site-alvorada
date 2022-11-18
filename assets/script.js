@@ -10,6 +10,11 @@ const subarrow = document.querySelector('.subitem-mobile .bx')
 const body = document.querySelector('body')
 const bars = document.querySelector('.bars')
 const close = document.querySelector('.close')
+const circle = document.querySelectorAll('.circle')
+const input = document.querySelectorAll('input')
+const textArea = document.querySelector('textarea')
+const resp = document.querySelector('.resposta')
+const revArea = document.querySelector('.review-area')
 document.addEventListener('scroll', function(e) {
     if (window.pageYOffset == 0) {
     navbar.classList.remove('grayBackground')
@@ -59,6 +64,49 @@ onloadFunction = (e) => {
 loadSubitem = () => {
     subItemM.classList.toggle('showSubItemMobile')
     subarrow.classList.toggle('arrowRotate')
+}
+circle[1].addEventListener('click', function(e) {
+    circle[1].classList.add('black')
+    circle[1].classList.remove('white')
+    circle[0].classList.add('white')
+    circle[2].classList.add('white')
+    revArea.classList.add('move-1')
+    revArea.classList.remove('move-3')
+    revArea.classList.remove('move-2')
+})
+circle[2].addEventListener('click', function(e) {
+    circle[2].classList.add('black')
+    circle[2].classList.remove('white')
+    circle[1].classList.add('white')
+    circle[0].classList.add('white')
+    revArea.classList.add('move-2')
+    revArea.classList.remove('move-1')
+    revArea.classList.remove('move-3')
+})
+circle[0].addEventListener('click', function(e) {
+    circle[0].classList.add('black')
+    circle[0].classList.remove('white')
+    circle[1].classList.add('white')
+    circle[2].classList.add('white')
+    revArea.classList.add('move-3')
+    revArea.classList.remove('move-1')
+    revArea.classList.remove('move-2')
+})
+clearSendF = () => {
+    if (input[0].value == 0 || input[1].value == 0 || input[2].value == 0 || input[3].value == 0 || input[4].value == 0 || input[5].value == 0) {
+        alert('Todos os campos devem ser preenchidos.')
+        resp.innerText = ''
+    } else {
+        resp.innerText = ''
+        resp.innerText = 'Sua mensagem foi enviada com sucesso'
+        input[0].value = ''
+        input[1].value = ''
+        input[2].value = ''
+        input[3].value = ''
+        input[4].value = ''
+        input[5].value = ''
+        textArea.value = ''
+    }
 }
 }
 bodyFunction()

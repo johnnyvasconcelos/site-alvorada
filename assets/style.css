@@ -75,7 +75,7 @@ ul {
     list-style: none;
 }
 
-button {
+button, .btn {
     padding: 20px;
     background-color: transparent;
     border: 1px solid var(--white);
@@ -98,7 +98,7 @@ button {
 
 .title h2::after {
     content: '';
-    background-image: url('../assets/images/waves.png');
+    background-image: url('../assets/images/waves.webp');
     background-size: cover;
     background-repeat: no-repeat;
     height: 35px;
@@ -110,7 +110,7 @@ button {
 
 .title h2::before {
     content: '';
-    background-image: url('../assets/images/waves-2.png');
+    background-image: url('../assets/images/waves-2.webp');
     background-size: cover;
     background-repeat: no-repeat;
     height: 35px;
@@ -272,17 +272,17 @@ nav .container > .mobButton .bars.None {
 
 /* cabeçalho */
 
-header {
+.header {
     height: 100vh;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../assets/images/banner-7.jpg');
+    background-image: url('../assets/images/banner-7.webp');
     position: relative;
     z-index: 100;
 }
 
-header::after {
+.header::after {
     content: '';
     width: 100%;
     height: 100%;
@@ -294,7 +294,7 @@ header::after {
     z-index: 300;
 }
 
-header .content {
+.header .content {
     transition: 1.2s;
     top: 50%;
     left: 50%;
@@ -305,7 +305,7 @@ header .content {
     text-align: center;
 }
 
-header .content h1 {
+.header .content h1 {
     transform: translateY(-25%);
     transition: 1.5s!important;
     opacity: 0;
@@ -313,7 +313,7 @@ header .content h1 {
     margin-bottom: 20px;
 }
 
-header .content h2 {
+.header .content h2 {
     transform: translateY(-25%);
     transition: 0.8s!important;
     opacity: 0;
@@ -325,7 +325,7 @@ header .content h2 {
     margin-bottom: 40px;
 }
 
-header .content h3 {
+.header .content h3 {
     position: relative;
     transform: translateY(-25%);
     transition: 0.8s;
@@ -338,9 +338,9 @@ header .content h3 {
     font-weight: 600;
 }
 
-header .content h3::after {
+.header .content h3::after {
     content: '';
-    background-image: url('../assets/images/waves.png');
+    background-image: url('../assets/images/waves.webp');
     background-size: cover;
     background-repeat: no-repeat;
     height: 50px;
@@ -350,9 +350,9 @@ header .content h3::after {
     width: 250px;
 }
 
-header .content h3::before {
+.header .content h3::before {
     content: '';
-    background-image: url('../assets/images/waves-2.png');
+    background-image: url('../assets/images/waves-2.webp');
     background-size: cover;
     background-repeat: no-repeat;
     height: 50px;
@@ -362,20 +362,24 @@ header .content h3::before {
     width: 250px;
 }
 
-header .content a {
+.header .content a {
     transform: translateY(-25%);
     transition: 0.8s;
     opacity: 0;
 }
 
-header .content button {
+.header .container .content .btn {
+    transform: translateY(40%)!important;
+    width: 180px!important;
     transition: 0.8s;
+    display: block;
+    margin: auto;
     position: relative;
     z-index: 100;
     cursor: pointer;
 }
 
-header .content button::after {
+.header .content .btn::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -388,35 +392,35 @@ header .content button::after {
     background: #ffffff00;
 }
 
-header .content button:hover {
+.header .content .btn:hover {
     color: var(--dark);
     background-color: var(--white);
     transform: scale(103%);
 }
 
-header .content button:hover::after {
+.header .content .btn:hover::after {
     width: 100%;
     background-color: var(--white);
 }
 
-header .container .nav-arrow {
+.header .container .nav-arrow {
     text-align: center;
     cursor: pointer;
     transition: 1s all ease-in-out;
     transform: translateY(150%);
 }
 
-header .container .nav-arrow .bx {
+.header .container .nav-arrow.active {
+    transform: translateY(200%);
+}
+
+.header .container .nav-arrow .bx {
     font-size: 55px;
     color: #ffffff48;
     transition: 1s all ease-in-out;
 }
 
-header .container .nav-arrow.active {
-    transform: translateY(200%);
-}
-
-header .container .nav-arrow.active .bx {
+.header .container .nav-arrow.active .bx {
     color: var(--color-2-alt);
 }
 
@@ -467,8 +471,9 @@ header .container .nav-arrow.active .bx {
 .menu-mobile ul li, .menu-mobile ul li a {
     text-transform: uppercase;
     text-align: center;
+    font-family: var(--display);
     color: var(--color-2);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 17px;
     margin: 20px 0;
 }
@@ -563,7 +568,7 @@ header .container .nav-arrow.active .bx {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
-    background-image: url('../assets/images/restaurante.jpg');
+    background-image: url('../assets/images/restaurante.webp');
     margin-top: 20px;
 }
 
@@ -617,18 +622,22 @@ header .container .nav-arrow.active .bx {
     font-size: 18px;
 }
 
-.cardapio .container .menu button {
+.cardapio .container .menu .btn {
+    text-align: center;
     border: 1px solid var(--dark);
     color: var(--dark);
     cursor: pointer;
     margin: 55px auto 15px auto;
     transition: 0.5s;
+    color: var(--dark)!important;
+    transition: 0.3s;
 }
 
-.cardapio .container .menu button:hover {
+.cardapio .container .menu .btn:hover {
     background-color: var(--color-2);
     color: var(--white);
     border: 1px solid var(--color-2);
+    color: var(--white)!important;
 }
 
 /* avaliações */
@@ -657,10 +666,30 @@ header .container .nav-arrow.active .bx {
 
 .reviews .container .avaliacoes {
     width: 100%;
+    text-align: center;
+    overflow: hidden;
 }
 
-.reviews .container .avaliacoes {
-    text-align: center;
+.reviews .container .avaliacoes .review-area {
+    display: flex;
+    width: calc(3*100%);
+    transition: 0.6s;
+}
+
+.reviews .container .avaliacoes .review-area .people {
+    width: 100%;
+}
+
+.reviews .container .avaliacoes .review-area.move-1 {
+    margin-left: -100%!important;
+}
+
+.reviews .container .avaliacoes .review-area.move-2 {
+    margin-left: -200%!important;
+}
+
+.reviews .container .avaliacoes .review-area.move-3 {
+    margin-left: 0%!important;
 }
 
 .reviews .container .avaliacoes .people .image {
@@ -694,6 +723,7 @@ header .container .nav-arrow.active .bx {
 .reviews .container .avaliacoes .indicators > div {
     width: 15px;
     height: 15px;
+    cursor: pointer;
     border: 1px solid var(--dark);
     border-radius: 50%;
     margin: 0 3px;
@@ -721,7 +751,7 @@ header .container .nav-arrow.active .bx {
 
 .form {
     padding: 100px 0;
-    background-image: url('../assets/images/form.jpg');
+    background-image: url('../assets/images/form.webp');
     background-size: cover;
     position: relative;
 }
@@ -809,6 +839,16 @@ header .container .nav-arrow.active .bx {
 .form .container button:hover::after {
     width: 100%;
     background-color: var(--white);
+}
+
+.form .container .resposta {
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    color: #c5f1c5;
+    text-align: center;
+    font-size: 18px;
+    z-index: 1000;
 }
 
 /* rodapé */
@@ -972,6 +1012,12 @@ footer .container .social-icons .icon .bx {
     header .container .content > h1 {
         font-size: 90px;
     }
+    .header .container .nav-arrow {
+        transform: translateY(80%);
+    }
+    .header .container .nav-arrow.active {
+        transform: translateY(130%);
+    }
 }
 
 /* laptop, tablet, mobile */
@@ -1011,6 +1057,9 @@ footer .container .social-icons .icon .bx {
         width: 100%!important;
         height: auto;
         border: none!important;
+    }
+    .form .container .resposta {
+        margin-top: 30px!important;
     }
     .cardapio .container .menu .plates .plate {
         margin: 0 0!important;
@@ -1057,6 +1106,15 @@ footer .container .social-icons .icon .bx {
     }
     #footer .container .social-icons {
         justify-content: center;
+    }
+    .header .container .nav-arrow {
+        transform: translateY(140%);
+    }
+    .header .container .nav-arrow .bx {
+        font-size: 30px!important;
+    }
+    .header .container .nav-arrow.active {
+        transform: translateY(180%);
     }
 }
 
@@ -1124,6 +1182,9 @@ footer .container .social-icons .icon .bx {
     header .container .content h1 {
         line-height: 1;
     }
+    .about .container .text .content {
+        padding: 0px!important;
+    }
 }
 
 @media (max-width: 700px) {
@@ -1137,6 +1198,14 @@ footer .container .social-icons .icon .bx {
     header .content h3::before {
         width: 50%!important;
     }
+    header .container .nav-arrow {
+        font-size: 20px!important;
+        transform: translateY(30%);
+    }
+    
+    header .container .nav-arrow.active {
+        transform: translateY(100%);
+    }
 }
 
 @media (max-width: 587px) {
@@ -1149,6 +1218,9 @@ footer .container .social-icons .icon .bx {
     .form .container form .input input {
         width: 100%;
     }
+    header .content h3 {
+        font-size: 16px!important;
+    }
 }
 
 @media (max-width: 485px) {
@@ -1157,6 +1229,10 @@ footer .container .social-icons .icon .bx {
     }
     header .content h3::before {
         width: 25%!important;
+    }
+    .bot-bar .container p {
+        font-size: 13px!important;
+        padding: 0 20px;
     }
 }
 
